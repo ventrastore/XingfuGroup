@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xingfu Freelancer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+        }
+
+        /* Efek Kaca Halus (iOS Style) */
+        .glass {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Gradient Glow dari Gambar Referensi (dipadukan ke Putih) */
+        .glow-accent {
+            background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Penataan Gambar Lengkung seperti di Referensi */
+        .hero-shape {
+            border-radius: 100px 100px 20px 20px;
+            overflow: hidden;
+        }
+
+        .ios-shadow {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed top-0 w-full z-50 glass border-b border-gray-50">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tighter">Xingfu<span class="text-blue-500">.</span></div>
+            
+            <div class="hidden md:flex space-x-10 text-[13px] font-bold uppercase tracking-[0.2em] text-gray-400">
+                <a href="#beranda" class="hover:text-black transition">Home</a>
+                <a href="#berita" class="hover:text-black transition">News</a>
+                <a href="#tentang" class="hover:text-black transition">About</a>
+            </div>
+
+            <a href="https://xingfufreelance.vercel.app/" target="_blank" class="bg-black text-white px-7 py-2.5 rounded-full text-sm font-bold shadow-lg hover:scale-105 transition">
+                Login
+            </a>
+        </div>
+    </nav>
+
+    <section id="beranda" class="pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="flex items-center space-x-2 mb-6">
+                    <div class="w-8 h-[2px] bg-blue-500"></div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-blue-500">Smart Freelance for a Better Future</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.05] tracking-tighter mb-8">
+                    Xingfu <br><span class="glow-accent">Group</span>
+                </h1>
+                <p class="text-lg text-gray-500 font-light leading-relaxed mb-10 max-w-md">
+                    Bekerja dengan transparansi. Temukan ekosistem kerja yang menghargai bakat Anda.
+                </p>
+              
+            </div>
+            
+            <div class="hero-shape ios-shadow bg-gray-100 aspect-[4/5] relative">
+                <img src="background beranda.png" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-1000">
+                <div class="absolute bottom-8 left-8 right-8 glass p-6 rounded-3xl">
+                    <p class="text-xs font-bold text-blue-600 mb-1"></p>
+                    <p class="text-sm font-medium"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="berita" class="py-24 bg-gray-50/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-extrabold tracking-tighter mb-12 flex items-center">
+                Berita Terbaru <span class="ml-4 h-[1px] flex-1 bg-gray-200"></span>
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-4 rounded-[2.5rem] ios-shadow border border-gray-100">
+                    <div class="rounded-[2rem] overflow-hidden mb-6 aspect-video bg-blue-100">
+                        <img src="news 1.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h3 class="font-bold text-lg mb-4">Angpou Gratis untuk Para Freelancer (2/15/2026)</h3>
+                        <p class="text-sm text-gray-400 mb-6">Cukup dengan mengisi quiz singkat, kamu sudah berkesempatan mendapatkan angpou gratis dalam rangka perayaan Imlek 2026. Mudah, cepat,
+                             dan kuota terbatas di tanggal 15 Februari 
+                             2026 — segera ikuti sekarang!</p>
+                        <button class="text-xs font-bold uppercase tracking-widest text-blue-500"></button>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-[2.5rem] ios-shadow border border-gray-100">
+                    <div class="rounded-[2rem] overflow-hidden mb-6 aspect-video bg-purple-100">
+                        <img src="news 2.png" class="w-full h-full object-cover">
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h3 class="font-bold text-lg mb-4">Segera hadir freelance Jual Gambar (1/9/2026)</h3>
+                        <p class="text-sm text-gray-400 mb-6">Program freelance terbaru untuk kamu yang hobi membuat atau menjual gambar. Dapatkan kesempatan menghasilkan cuan dari karya visual dengan sistem mudah dan fleksibel. Nantikan segera pembukaannya!</p>
+                        <button class="text-xs font-bold uppercase tracking-widest text-blue-500"></button>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-[2.5rem] ios-shadow border border-gray-100">
+                    <div class="rounded-[2rem] overflow-hidden mb-6 aspect-video bg-indigo-100">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500" class="w-full h-full object-cover">
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h3 class="font-bold text-lg mb-4">Pembaruan sistem web cerdas dengan integrasi AI (1/2/2026)</h3>
+                        <p class="text-sm text-gray-400 mb-6">Pembaruan Sistem Web Cerdas dengan AI Sistem web kini lebih pintar dengan integrasi AI, menghadirkan pengalaman cepat, akurat, dan lebih intuitif bagi pengguna.</p>
+                        <button class="text-xs font-bold uppercase tracking-widest text-blue-500"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-24">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold tracking-tighter mb-10">Sejarah Kami</h2>
+            <div class="space-y-8 text-lg text-gray-500 font-light leading-relaxed">
+                <p><strong></strong> </p>
+                <p>Xingfu lahir sebagai ruang tanpa batas bagi setiap orang yang ingin berkembang.
+
+Kami memulai perjalanan ini dengan satu tujuan memastikan setiap transaksi dan interaksi di platform ini memberi pengalaman yang bermanfaat dan membahagiakan bagi semua pihak.</p>
+            </div>
+            <div class="mt-16 rounded-[3rem] overflow-hidden ios-shadow">
+                <img src="company logo.jpg" class="w-full">
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 border-t border-gray-100 text-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <p class="text-xs font-bold uppercase tracking-[0.3em] text-gray-300 mb-8">Official Platform</p>
+            <div class="text-4xl font-bold mb-10 italic">Xingfu.</div>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-12">
+                <a href="https://wa.me/628123456789" class="text-lg font-medium">Customer Service (Gmail)</a>
+                <span class="hidden md:block w-2 h-2 rounded-full bg-blue-500"></span>
+                <p class="text-lg font-medium text-gray-400">helpxingfugroup@gmail.com</p>
+            </div>
+            <p class="mt-20 text-[10px] text-gray-300 uppercase tracking-widest">&copy; 2026 Xingfu Digital. Indonesia.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
